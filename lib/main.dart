@@ -1,6 +1,14 @@
+import 'package:admob_banner/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+/////////////////////////////////////
+/// LINK DOCUMENT ::: https://codefittings.com/google-banner-ad-in-flutter-full-code/
+/////////////////////////////////////
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
   runApp(const MyApp());
 }
 
@@ -17,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: HomePage(),
     );
   }
 }
